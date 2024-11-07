@@ -11,7 +11,7 @@ const SpeechGenerator = () => {
         }
 
         try {
-            const response = await fetch(`http://ailangtest.ap-south-1.elasticbeanstalk.com/genspeech?text=${encodeURIComponent(text)}`, {
+            const response = await fetch(`http://localhost:5000/genspeech?text=${encodeURIComponent(text)}`, {
                 method: 'GET',
             });
             const blob = await response.blob();
